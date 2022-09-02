@@ -13,6 +13,9 @@ def eat_lunch(list):
     print("My lunchbox is empty")
 
 hello()
-print(pack("socks", "barbed-wire", "7-up"))
+
+packed = pack("socks", "barbed-wire", "7-up")
+print(f"Items packed: {packed}")
+
 eat_lunch(["tuna", "Apple Jacks"])
 eat_lunch([])
