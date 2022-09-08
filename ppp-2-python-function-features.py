@@ -1,7 +1,4 @@
 
-from operator import length_hint
-
-
 def arb_args(*args):
     for arg in args:
         print(arg)
@@ -55,8 +52,6 @@ print(arb_mean(3, 35, 14, 22, 7))
 print(arb_mean(13, 6, 10, 4))
 
 def arb_longest_string(*args):
-  # if (len(args) == 0):
-  #   return 0
   longest = 0
   for arg in args:
     length = len(arg)
