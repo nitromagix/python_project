@@ -17,13 +17,16 @@ print(max_num(66, 77, 99))  #  99
 
 #   Write a Python function called mult_list() to multiply all the numbers in a list.
 
-def mult_list(number_list):
+def mult_list(number_list, i=0):
+      if len(number_list) == 0 and i == 0:
+          return 0
       if len(number_list) == 0:
           return 1
-      return number_list.pop(0) * mult_list(number_list)
+      return number_list.pop(0) * mult_list(number_list, i+1)
 
 
 print(mult_list([1, 2, 3, 4, 5]))  #  120
+print(mult_list([]))  #  0
 
 
 
