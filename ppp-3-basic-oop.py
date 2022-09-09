@@ -33,11 +33,12 @@ class Race:
 
     def get_average_ranking(self):
         total_of_ranks = 0
-        if len(self.drivers) == 0:
+        number_of_drivers = len(self.drivers)
+        if number_of_drivers == 0:
             return 0
         for driver in self.drivers:
             total_of_ranks += driver.get_ranking()
-        return total_of_ranks / len(self.drivers)
+        return total_of_ranks / number_of_drivers
 
 my_race = Race('Seattle 500', 4)
 print(my_race.name, my_race.driver_limit, my_race.drivers)
@@ -66,7 +67,6 @@ my_race.add_driver(lewis)
 my_race.add_driver(eliud)
 my_race.add_driver(seb)
 my_race.add_driver(ayrton)
-
 
 print(my_race.get_average_ranking())
 print(ayrton.number_of_drivers)
