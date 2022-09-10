@@ -43,7 +43,7 @@ def unflatten_dict(dictionary):
     return unflattened
 
 
-print(unflatten_dict({'a': 1, 'b.i': 2, 'b.j': 3, 'c': 4}))
+print(unflatten_dict({'a': 1, 'b.i': 2, 'b.j': 3, 'c': 4}))  #  {'a': 1, 'b': {'i': 2, 'j': 3}, 'c': 4}
 
 
 def treemap(map_function, the_list):
@@ -57,5 +57,5 @@ def treemap(map_function, the_list):
     return new_list
 
 
-print(treemap(lambda x: x*x, [2, 4, 5, 8, [9, 19]]))
-print(treemap(lambda x: x*x, [1, 2, [3, 4, [5]], [1, 4, [9, 16, [25]]]]))
+print(treemap(lambda x: x*x, [2, 4, 5, 8, [9, 19]]))  #  [4, 16, 25, 64, [81, 361]]
+print(treemap(lambda x: x*x, [1, 2, [3, 4, [5]], [1, 4, [9, 16, [25]]]]))  #  [1, 4, [9, 16, [25]], [1, 16, [81, 256, [625]]]]
