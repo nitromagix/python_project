@@ -65,12 +65,6 @@ print(num_within(2,7,9))  #  false
 #
 #
 #
-#       VVVVV       COPIED FROM SOLUTION!!!  I couldn't figure this out!       VVVVV
-#
-#
-#
-
-
 triangle = [[1],[1,1]]
 def pascal(n):
   #base case
